@@ -32,7 +32,7 @@
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 	
 		<script>
-			$("document").ready(function(){
+			function setup(){
 					$.ajax({
 						url: "/php/AllDeviceCategories.php", //Relative or absolute path to response.php file
 						dataType: "json",
@@ -47,7 +47,7 @@
 						 }
 					});
 				return false;
-			});
+			}
 		</script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -59,7 +59,7 @@
 
 </head>
 
-<body id="page-top">
+<body id="page-top" OnLoad="setup()">
 
     <nav class="navbar navbar-default navbar-fixed-top affix">
         <div class="container-fluid">
