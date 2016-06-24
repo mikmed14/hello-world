@@ -29,23 +29,21 @@
     <link rel="stylesheet" href="css/mycss.css" type="text/css">
 	
 	<!-- My JQuery script-->
-	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-	
 		<script>
 			function setup(){
-					$.ajax({
-						url: "/php/AllDeviceCategories.php", //Relative or absolute path to response.php file
-						dataType: "json",
-						success: function(data) {
-							$(".row").html
-							(
-								data["query"]
-							);
-						},
-						error: function(){
-							alert("Chiamata fallita!!!");
-						 }
-					});
+				$.ajax({
+					url: "/php/AllDeviceCategories.php", //Relative or absolute path to response.php file
+					dataType: "json",
+					success: function(data) {
+						$(".row").html
+						(
+							data["query"]
+						);
+					},
+					error: function(){
+						alert("Chiamata fallita!!!");
+					 }
+				});
 				return false;
 			}
 		</script>
